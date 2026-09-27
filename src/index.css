@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-vazir: 'Vazirmatn', system-ui, -apple-system, sans-serif;
+    --font-cinzel: 'Cinzel', Georgia, serif;
+    --gold-primary: #c59b27;
+    --gold-light: #f3e5ab;
+    --gold-dark: #8c6d17;
+    --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-vazir);
+    background-color: #faf8f5;
+    color: #1c1917;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar for Luxury White & Gold Feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f5efe6;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 9999px;
+  border: 2px solid #f5efe6;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b38728;
+}
+
+/* Luxury White & Gold Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.24);
+  box-shadow: 0 10px 30px rgba(180, 140, 60, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-subtle {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.16);
+  box-shadow: 0 4px 20px rgba(180, 140, 60, 0.05);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-elevated {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(212, 175, 55, 0.38);
+  box-shadow: 0 20px 45px rgba(140, 109, 23, 0.14), 0 0 25px rgba(212, 175, 55, 0.1);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Luxury Gold Gradients & Text */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #8c6d17 0%, #c59b27 30%, #e5c158 55%, #8c6d17 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.aurora-gradient-text {
+  background: linear-gradient(135deg, #1c1917 0%, #8c6d17 35%, #d4af37 70%, #aa771c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #b38728 0%, #dfba48 45%, #c59b27 80%, #996515 100%);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.28);
+}
+
+.aurora-gold-glow {
+  box-shadow: 0 0 35px -5px rgba(212, 175, 55, 0.35);
+}
+
+/* Ambient Background Radial Glows for White-Gold theme */
+.bg-radial-aurora {
+  background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.14) 0%, rgba(245, 239, 230, 0.5) 45%, transparent 75%);
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+/* Smooth Luxury Transitions */
+.luxury-card-transition {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+/* Shimmer pulse for gold borders */
+@keyframes subtle-shimmer {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+.animate-subtle-shimmer {
+  animation: subtle-shimmer 3s ease-in-out infinite;
+}

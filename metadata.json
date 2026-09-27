@@ -1,0 +1,6 @@
+{
+  "name": "Aurora Real Estate",
+  "description": "وبسایت لوکس، مدرن و سینمایی املاک آرورا - خانه‌ای برای آینده با معماری سه‌بعدی و املاک منتخب",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
